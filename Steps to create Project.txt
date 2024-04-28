@@ -1,0 +1,200 @@
+Technologies Use:
+        1. MERN 
+        2. Tailwind CSS
+        3.DaisyUI // framework of tailwind css
+        4. react slick slider 
+        5.react hook form
+
+
+
+step 1:
+      create bookStore folder and in this create frontEnd and backEnd folder.
+           >mkdir bookStore
+           >cd bookStore
+           >mkdir frontEnd
+           >mkdir backEnd
+           
+******** frontEnd setup ***************
+
+#***********Home tab *******************# 
+step 2:
+   in frontEnd folder use taiwind CSS to desing UI
+      > cd frontEnd 
+         >  visit tailwindcss.com
+            then select Vite for create React app
+      > npm create vite@latest .
+             // proceed ? : y
+            // Package name: ... frontend 
+            // Select a framework: » 
+            //           React  // select react
+            // select variant: 
+            //           javascript  // select      
+      
+      > npm install
+      >  //install tailwindcss:
+          > npm install -D tailwindcss postcss autoprefixer
+          > npx tailwindcss init -p
+
+        /* After this tailwind.config.js generate. and paste
+         code in tailwind.config.js and index.css from tailwind website.
+         " install extesnion ES7 + React/Redux/Graph..  and  Tailwind CSS IntelliSense"
+         Remove code from App.jsx and update code using rcfe + enter
+        */
+
+Step 3:   
+     
+         **create navbar:***
+
+       // Use DaisyUI component library of tailwindcss  to create our navbar.
+       // visit DaisyUI.com
+
+      > npm i -D daisyui@latest
+          after this add plugins in tailwind.config.js
+           remove app.css file beacause we no need
+         
+          create src/components folder and in folder  create  Navbar.jsx file
+     
+        In Navbar.jsx file:
+          
+           1.create react function use rcfe
+             2.then in retun create react framentation( <> </>)
+              3.in this fragmnetation create our <div> </div>
+              4.and in this div paste code copy from daisyUI  of jsx code of respective navbar.
+           5. after all in src/App.jsx file import Navbar componets 
+                in return create react fragment <> </>
+                 and in this write <Navbar/>.  
+            6. make some chnage in Navabar.jsx file as we needs like 
+               our logo , multiple li  and as per navbar we want
+
+
+step 4: Use google fonts embeded code and  in index.css file  import this embeded code on top.
+
+        a.   Poppins of regular 500 
+        b.  Fredoka            
+
+step 5:
+   Create src/components/Banner.jsx file
+
+   and import in App.jsx
+
+     create left and right section and update as per project we want
+
+      take books image for right section from freepik.com. 
+       and remove this backgroungd also.
+
+step 6: 
+      reate src/components/Footer.jsx file
+
+
+       React Hook :
+              hooks are function in React that allow us to manage state, do  chnages as perthe state, and other react features without 
+              using class components. They provide a way to resuse stateful logic across
+              components.
+              1. useState() : It is used to manage and updatestate, while
+
+              2. useEffect() : the useEffect hook is used for handling side effects during component
+                          mount,update and unmount.     
+
+        Use to mange the state like when nav bar scroll then show nvabar shadow  or not.
+
+
+step 7:
+
+    1. create src/components/Books.jsx and public/freeBooklist.json
+
+    2. install react slick slider  //use for flex
+
+       >  npm install react-slick --save     // installation
+       > npm install slick-carousel --save    // Include CSS installation
+
+      and import in Books.jsx
+
+         import "slick-carousel/slick/slick.css";
+         import "slick-carousel/slick/slick-theme.css";
+         import Slider from "react-slick";
+
+
+       3.create src/components/Cards.jsx file 
+           
+           and import to Books.js using props
+
+      # React Props :
+        In react ,props (properties) are a way to pass data
+         from a parent component to child component.
+
+         Props allows, componets to be dynamic and flexible, once they recived different
+         data and render accordingly.
+         
+         example:
+          here parent comp. is Books.jsx and child is Cards.jsx.
+
+Step8:
+
+Here Im change directory of files
+
+  move file like Navbar,Cards,Books,Banner,footer.jsx file save
+  to src/components/HomeComponents
+  create Pages/Home.jsx file and import  HomeComponets files in it.
+  and this Home.jsx file import in App.jsx instad of seperate importing Navbar, footer,...etc.
+
+
+
+#************** Course *************#
+
+step 9:
+
+   create src/components/CourseComponents/Course.jsx
+
+   for routing :
+   install
+   > npm i react-router-dom     
+
+
+when use route in App.jsx file must check main.jsx not conitain 
+React.StrictMode.
+
+ also create src/Pages/Coursec.jsx file and
+   Route in App.jsx file .
+
+
+in Course.jsx file there is back button  after click they back to Hme page.
+this can link to router <Link to="/"> </Link> tag.    
+
+
+ step 10:
+
+ update theme controller dark light StrictMode
+
+ use react hook for this
+     const [theme, setTheme] = useState( localStorage.getItem("theme") ?localStorage.getItem("theme"):"light" )
+
+      here localStorage is see in our browser inspect > application tab
+      there key " theme" use above after getItem becuase after click on button the values go to theme.
+  
+      then us onclick on sun and moon 
+
+      also put tailwindcss selecor in tailwind.config.js
+        darkMode:"class",
+      
+
+ step 11:
+
+ Login button
+
+ create component Login.jsx
+
+ use modal from 
+ 
+
+create HomeComponents/Signup.jsx
+
+create route for Signup in App.jsx
+
+
+ step 11:
+  go to react hook form website 
+  and install 
+  > npm install react-hook-form
+ and import in Login.jsx
+   import { useForm } from "react-hook-form"
+

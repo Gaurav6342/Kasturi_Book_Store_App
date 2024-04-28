@@ -1,0 +1,69 @@
+[
+    {
+        "id":1,
+        "name":"C Programming Book",
+        "title":"This book provides a detailed explanation of C programming.",
+        "price":0,
+        "category":"free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+
+    {
+        "id":2,
+        "name":"Comedy Book",
+        "title":"This book provides a detailed explanation of data structures such as arrays, linked lists, stacks, queues, trees, and graphs.",
+        "price":20,
+        "category":"comedy",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+         
+    {
+        "id":3,
+        "name":"Music Book",
+        "title":"This book provides a detailed explanation of data structures such as arrays, linked lists, stacks, queues, trees, and graphs.",
+        "price":100,
+        "category":"Songs",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+
+    {
+        "id":4,
+        "name":"Food Book",
+        "title":"This book provides a detailed explanation of data structures such as arrays, linked lists, stacks, queues, trees, and graphs.",
+        "price":200,
+        "category":"food",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+    {
+        "id":5,
+        "name":" DSA Book",
+        "title":"This book provides a detailed explanation of data structures.",
+        "price":0,
+        "category":"free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+
+    {
+        "id":6,
+        "name":"React Programming Book",
+        "title":"This book provides a detailed explanation of React Programming",
+        "price":0,
+        "category":"free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    },
+    {
+        "id":7,
+        "name":"Python Programming Book",
+        "title":"This book provides a detailed explanation of Python",
+        "price":0,
+        "category":"free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1713602900~exp=1713606500~hmac=26661284717118e77c5dc1de0ea25c42d2c8542523e0f8c1291c4d61eb767aee&w=740"
+
+    }
+]
