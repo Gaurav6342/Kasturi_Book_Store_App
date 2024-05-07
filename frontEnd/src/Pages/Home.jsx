@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/HomeComponets/Navbar'
 import Banner from '../components/HomeComponets/Banner'
-import Books from '../components/HomeComponets/Books'
+import HomeBooks from "../components/HomeComponets/HomeBooks"
 import Footer from '../components/HomeComponets/Footer'
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
     
     <Navbar/>    {/* import Navbar componet */}
     <Banner/>    {/* import Banner component*/}
-    <Books/>
+    <HomeBooks/>
     <Footer/>    {/* import Footer component*/} 
 
     </>

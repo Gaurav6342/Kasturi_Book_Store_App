@@ -24,7 +24,7 @@ function Cards({ item }) {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Cards
+export default Cards;

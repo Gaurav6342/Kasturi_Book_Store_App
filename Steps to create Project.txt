@@ -4,9 +4,11 @@ Technologies Use:
         3.DaisyUI // framework of tailwind css
         4. react slick slider 
         5.react hook form
-
-
-
+        6. install express 
+        7. install Postman
+        8. axios   //javascript library to connect frontend with APIs
+        9. bcryptjs   // secure our password 
+        10. react hot toast  // for succefull login ,signup alert looks goods
 step 1:
       create bookStore folder and in this create frontEnd and backEnd folder.
            >mkdir bookStore
@@ -15,7 +17,8 @@ step 1:
            >mkdir backEnd
            
 ******** frontEnd setup ***************
-
+ start server :
+  >  npm run dev
 #***********Home tab *******************# 
 step 2:
    in frontEnd folder use taiwind CSS to desing UI
@@ -198,3 +201,226 @@ create route for Signup in App.jsx
  and import in Login.jsx
    import { useForm } from "react-hook-form"
 
+
+
+step 12 :
+ create own contact and about page
+
+
+************** vearion controll*****
+Update  frontEnd on github:
+
+> git init  // initailize git
+> git add .  // add our file in git init
+> git commit -m "frontent done"  // comments
+
+> git remote add origin URL   // add to github repo url
+
+> git push -u origin master or main    // add our files to github
+
+check before use master and main
+> git branch
+
+
+
+
+*******************Backend setup*********************
+
+******** server start ***************
+ start server :   
+  >  npm start
+****************************************
+
+step 1:
+
+for backend we need to initialize node application using
+
+> npm init
+   
+   package name: (backend) bookstore    // mention what you want
+   version:(1.0.0) 
+   description: mern project
+   entry point: (index.js)
+   test command:
+   git repository: mentione git reps url
+   keywords:
+   author: Gaurav Bagul
+   license: (ISC)  
+
+   after this backend/package.json file create 
+   in this our project info is mentioned
+
+
+install express in backend folder:
+
+ > npm install express
+
+create backend/index.js
+
+ for backend sever start :
+    > npm start
+     
+     : after this give missing script start issue
+      this  can solve by
+      in package.json file , in script section  mentioned : 
+      "start": "node index.js"  then again run npm start
+
+     
+   :when any changes in backend every time we want start server run npm start command so nodemon give server automatic restar when refresh server no need to start server again.
+    after install nodemon we must replace   art": "nodemon index.js"    
+    >npm i nodemon      
+  
+
+  step 2:
+
+   ** about .env file :**
+    :if we want run our project in specific port and want to secure our port number then
+     then store in .env file
+   
+    :create backend/.env file and mwntined port number
+       eg PORT: 4001
+     and this port can use in index.js file
+       const PORT = process.env.PORT || 4000;   { this line say if server not start from 4001 thne it must start on 4000} 
+    
+     before this  we must 
+     install .env: > npm i dotenv
+     import using and config: 
+     const dotenv = require('dotenv') 
+                              
+                      dotenv.config();
+
+        thne server start on our specifice port            
+
+   ***  about esmodule chnages**
+
+   as above importing " = require ()"  is commejs module recent express version use  after update we can import in backEnd also using es module
+
+   so  accoridng to es module changes  we can fooloe this changes:
+       1. in backend/package.json file after main insert : "type": "module",
+       2. then replace 
+       const express = require('express')  with        import express from 'express';
+      const dotenv = require('dotenv')                 import dotenv from 'dotenv'; 
+
+************ mongodb connection******
+step 3:
+     
+     
+     here we use MongoDB compass in locally install softeware
+ 
+     1.  in MongoDB softeware, connect and copy conne string/url
+        and paste in .env file using any variable.
+       
+        when copy from mongoDB compass it looks :  mongodb://localhost:27017/databseName
+                          some time it give issue databe not create so use 
+                          this:  mongodb://127.0.0.1:27017/databaName
+                                                    
+
+     2. in index.js   file import MogoDB url
+     3. install mongoose
+        > npm i mongoose 
+              :install beacue in this mongoose there is connection mnetioned to connect our database.
+             and import in index.js:  import mongoose from 'mongoose'
+
+
+step 4:
+    :create backend/ modal/book.modal.js, in this file create schema.
+
+    :create   backend/controller/book.controller.js, in this file create get request logic
+     
+   : create backEnd/route/book.route.js
+
+  :  after database create in MongoDB check or testing our api using Postman
+
+ :Postaman > workspaces> create New workspace> 
+     create collection (Books)> Add request (GET) > add get url : http://localhost:4001/book 
+
+     :here local host link which port we give in .env file and "book"  is use here is our index.js file mention ( app.use("/book", bookRoute); ) this "/book".
+
+      
+step 5:
+
+: after api succefully run in postman then
+right now we no need booklist file because this list data se send your database.
+
+:so insted of using list file we use call api in our frontend files.
+
+:we need connecting with API required javascript  libraru "AXios"
+ ***********
+: this installed in frontend directory
+   \frontEnd > npm install axios
+
+and related code in frontEnd/components/CourseComponents/Course.jsx
+
+means where we use data udate this file.
+
+:we get Cors error because we run front and backend in differrent port and CORS policy not allow this.
+ so need to install CORS in our backend directory
+   > npm i cors
+
+   and update backend/index.js :
+      import cors from "cors"
+      and app.use(cors());
+
+step 6:
+ for form login ,signup authentication
+
+ create backend/model/user.model.js     /// our schema
+ create backend/controller/user.contoller.js    /// create function logic
+ create backend/route/user.route.js    /// create function logic
+ after creation  update index.js
+
+ : :again check api using postman and in database 
+   also when we check in our db we see password
+   so password security in db  we need to decrypt this.
+
+   so install
+    > npm install bcryptjs
+ 
+   and import in controller/user.contoller.js file and update code.
+
+stp 7:
+
+aftr create signup and login import backend in frontend file.
+
+update signu in src/HomeComponents/signup.jsx
+    
+
+: in signup.jsx file, this line          
+ localStorage.setItem("Users", JSON.stringify(res.data.user));
+ ==> this line can store user data in browser localStorage
+   json.stringify says store date in same like stroe our database othervise this look in object
+
+   eg :
+      1. key : Users values:  {"_id":"6635ab64f77ad7114528c2e4","fullname":"deve","email":"deve@gmail.com"}
+     othervise
+      2.  key : Users values: [object Object]
+
+
+: update HomeComponents/login.jsx file  with same as signup.jsx insubmit function.
+   for login succefull alert we use react hot toast
+
+   install reacthot toast in frontEnd
+   > npm install react-hot-toast
+   :and import in app.jsx
+      import { Toaster } from 'react-hot-toast';
+and   <Toaster />
+
+   : and add toast syntax in login.jsx  
+    toast.success('Login succesfully');
+    toast.error("Error: " + err.response.data.message);
+
+ step 8:
+
+ create authentic user to accesee course context
+ :so create CourseComponents/authUserOfContext.jsx
+
+  wrappe this function in main.jsx
+
+  then update Navabar.jsx file
+  then update app.jsx 
+
+
+  step9: 
+  add backend to github
+    git remote -v
+     git add .
