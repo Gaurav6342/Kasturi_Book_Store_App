@@ -58,7 +58,7 @@ Welcome to the BookStore project! This full-stack web application enables users 
 
 ## 🚀 Usage
 
-- **Front-End**: Navigate to `frontEnd` and run `npm run dev`.
+- **Front-End**: Navigate to `frontEnd` and run `npm i` and run `npm run dev`.
 - **Back-End**: Navigate to `backEnd` and run `npm start`.
 
 ## 🌟 Contribution
@@ -66,3 +66,6 @@ Welcome to the BookStore project! This full-stack web application enables users 
 Contributions are welcome! Please open a pull request or issue for improvements or bug fixes.
 
 Thank you for exploring the BookStore project! 🎉
+
+
+
