@@ -1,7 +1,7 @@
 # 📚 Kasturi_Book_Store_App
 
 ##Project Link:
-https://kasturi-book-app-a95cf387269e.herokuapp.com/
+- https://kasturi-book-app-a95cf387269e.herokuapp.com/
 
 Welcome to the BookStore project! This full-stack web application enables users to explore, add, and manage books in a virtual bookstore.
 
