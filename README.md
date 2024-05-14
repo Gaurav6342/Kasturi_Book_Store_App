@@ -11,7 +11,8 @@ Welcome to the BookStore project! This full-stack web application enables users 
 - **Styling**: Tailwind CSS, DaisyUI
 - **Libraries**: React Slick Slider, React Hook Form, Axios, Bcryptjs, React Hot Toast
 - **Tools**: Postman
-
+- **Deployment: Heroku
+  
 ## 🛠️ Setup Instructions
 
 ### Front-End
